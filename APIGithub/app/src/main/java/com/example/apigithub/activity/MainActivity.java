@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         APIInterface apiService = APIClient.getRetrofit().create(APIInterface.class);
         Map<String, String> params = new HashMap<String, String>();
         String query = TopicsSearchView.getQuery().toString();
-        String q=query;
+        String q="topic:"+query;
 
         if(langaugeFilter !="Any")
             q=query+"+language:"+langaugeFilter;
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.INVISIBLE);
                 Context context = getApplicationContext();
                 CharSequence text = totalcount+ " Items was Found !";
-                int duration = Toast.LENGTH_SHORT;
+                int duration = Toast.LENGTH_LONG;
 
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
