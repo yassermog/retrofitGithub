@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.apigithub.R;
 import com.example.apigithub.adapter.RepoAdapter;
@@ -138,6 +140,12 @@ public class MainActivity extends AppCompatActivity {
                 int totalcount=ResponseObj.getTotalCount();
                 int count=30;
                 progressBar.setVisibility(View.INVISIBLE);
+                Context context = getApplicationContext();
+                CharSequence text = totalcount+ " Items was Found !";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
                 if(totalcount==0)
                 {
                     noResults.setVisibility(View.VISIBLE);
