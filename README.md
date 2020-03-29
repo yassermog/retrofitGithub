@@ -1,4 +1,4 @@
-# retrofitGithub
+# RetrofitGithub
 
 a Native Java Application to consume Github API to Search for Repositories by Language and Topics 
 
@@ -14,20 +14,20 @@ a Native Java Application to consume Github API to Search for Repositories by La
 
 
 You can get the PostMan https://www.getpostman.com/collections/c5d42af9dbdd56d00337
-![topics](docs/postmna.PNG)
+![topics](docs/postman.PNG)
 
-## Output 
+## Code 
 
 ### Manifest
 
 be sure that the internet access is granted to the application 
 
-```
+```xml
  <uses-permission android:name="android.permission.INTERNET" />
 ```
 
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.apigithub">
@@ -56,7 +56,7 @@ be sure that the internet access is granted to the application
 
 in `build.gradel` we need these dependincies 
 
-```
+```java
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
