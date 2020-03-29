@@ -42,18 +42,22 @@ public class RepoAdapter extends BaseAdapter {
         View view1=convertView;
         TextView repoBody;
         TextView repoTitle;
+        TextView repoTopicsTxt;
 
         if(view1==null){
             view1=layoutInflater.inflate(R.layout.grid_item,parent,false);
             view1.setTag(R.id.RepoTitleTxt,view1.findViewById(R.id.RepoTitleTxt));
             view1.setTag(R.id.RepoBodyTxt,view1.findViewById(R.id.RepoBodyTxt));
+            view1.setTag(R.id.RepoTopicsTxt,view1.findViewById(R.id.RepoTopicsTxt));
         }
         repoTitle=(TextView) view1.getTag(R.id.RepoTitleTxt);
         repoBody=(TextView) view1.getTag(R.id.RepoBodyTxt);
+        repoTopicsTxt=(TextView) view1.getTag(R.id.RepoTopicsTxt);
 
         ItemModel itemModel=items.get(position);
-        repoTitle.setText(itemModel.title);
-        repoBody.setText(itemModel.body);
+        repoTitle.setText(itemModel.getTitle());
+        repoBody.setText(itemModel.getBody());
+        repoTopicsTxt.setText(itemModel.getTopics());
 
         return view1;
     }

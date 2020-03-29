@@ -18,7 +18,7 @@ import retrofit2.http.QueryMap;
 
 public interface APIInterface {
     @Headers("Accept: application/vnd.github.mercy-preview+json")
-    @GET("topics")
+    @GET("repositories")
     Call<ResponseModel> getRepos(@QueryMap Map<String, String> params);
 
 }

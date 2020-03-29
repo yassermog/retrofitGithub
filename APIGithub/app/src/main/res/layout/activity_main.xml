@@ -3,6 +3,60 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"> <!-- Vertical Orientation set -->
+    Search by Topics :
+    <TextView
+        android:text="Filter By Language :"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <Spinner
+        android:id="@+id/languagesDropDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:tooltipText="Select A Language"
+        android:spinnerMode="dropdown"/>
+    <TextView
+        android:text="Search By Topics :"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+    <SearchView
+        android:id="@+id/topicsSearchView"
+        android:outlineSpotShadowColor="#ccc"
+        android:layout_width="match_parent"
+        android:queryHint="Enter a Topic"
+        android:iconifiedByDefault="false"
+        android:layout_height="wrap_content">
+    </SearchView>
+    <ProgressBar
+        android:layout_weight="1"
+        android:layout_gravity = "center"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:id="@+id/progressBar_cyclic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:minWidth="40dp" />
+    <TextView
+        android:id="@+id/noResults"
+        android:visibility="gone"
+        android:layout_gravity = "center"
+        android:layout_marginStart="10dp"
+        android:text="Not Results Found !"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
